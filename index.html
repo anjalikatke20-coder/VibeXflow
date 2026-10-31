@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Gallery</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <h1 id="title"> GalleryX </h1>
+    <p>Capture every moment, preserve every memory. Explore a beautiful collection of photographs, discover stunning visuals, and relive your favorite moments. Every picture tells a story, and every story deserves to be remembered.</p>
+    <div class="search-container">
+        <input type="text" placeholder="Search photos..." class="search-box">
+        <button class="search-button">Search</button>
+    </div>
+
+    <div class="add-photo-section">
+    <button id="addPhotoBtn">+ Add Photo</button>
+
+    <input
+        type="file"
+        id="photoInput"
+        accept="image/*"
+        hidden
+    >
+
+    <select id="photoCategory">
+        <option value="nature">Nature</option>
+        <option value="technology">Technology</option>
+        <option value="people">People</option>
+    </select>
+</div>
+
+    <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">All Collections</button>
+    <button class="filter-btn" data-filter="nature">Nature</button>
+    <button class="filter-btn" data-filter="technology">Technology</button>
+    <button class="filter-btn" data-filter="people">People</button>
+    </div>
+    <div class="gallery">
+        <div class="gallery-img"><img src="images/nature1.jpg" alt="Nature Photo " data-category="nature"></div>
+        <div class="gallery-img"><img src="images/tech1.jpg" alt="Technology Photo 1 " data-category="technology"></div>
+        <div class="gallery-img"><img src="images/pe1.jpg" alt="People Photo " data-category="people"></div>
+        <div class="gallery-img"><img src="images/nature2.jpg" alt="Nature Photo " data-category="nature"></div>
+        <div class="gallery-img"><img src="images/tech2.jpg" alt="Technology Photo2 " data-category="technology"></div>
+        <div class="gallery-img"><img src="images/pe2.jpg" alt="People Photo " data-category="people"></div>
+        <div class="gallery-img"><img src="images/pe3.jpg" alt="People Photo " data-category="people"></div>
+        <div class="gallery-img"><img src="images/pe4.jpg" alt="People Photo " data-category="people"></div>
+        <div class="gallery-img"><img src="images/nature3.jpg" alt="Nature Photo " data-category="nature"></div>
+        <div class="gallery-img"><img src="images/nature4.jpg" alt="Nature Photo " data-category="nature"></div>
+        <div class="gallery-img"><img src="images/tech3.jpg" alt="Technology Photo  " data-category="technology"></div>
+        <div class="gallery-img"><img src="images/tech4.jpg" alt="Technology Photo  " data-category="technology"></div>
+        <div class="gallery-img"><img src="images/tech5.jpg" alt="Technology Photo " data-category="technology"></div>
+    </div>
+    <div id="lightbox" class="lightbox">
+    <button class="close" aria-label="Close">&times;</button>
+
+    <button class="prev" aria-label="Previous image">&#10094;</button>
+
+    <img id="lightbox-img" src="images/nature1.jpg" alt="Nature Photo ">
+
+    <button class="next" aria-label="Next image">&#10095;</button>
+
+    <p id="caption"></p>
+
+
+    <script src="script.js"></script>
+</div>
+</body>
+</html>
